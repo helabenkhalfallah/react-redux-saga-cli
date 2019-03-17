@@ -7,6 +7,8 @@ import UserAddActionTypes from '../redux/actions/UserAddActionTypes';
 
 import UserEditActionTypes from '../redux/actions/UserEditActionTypes';
 
+import UserDeleteActionTypes from '../redux/actions/UserDeleteActionTypes';
+
 
 class UserAddPage extends Component {
   // propsType (validation)
@@ -54,13 +56,16 @@ const mapStateToProps = state => ({
   userEdit: (state && state[1]) ? state[1].userEdit : null,
   userEditLoading: (state && state[1]) ? state[1].loading : false,
   userEditError: (state && state[1]) ? state[1].error : null,
+  userDelete: (state && state[3]) ? state[3].userDelete : null,
+  userDeleteLoading: (state && state[3]) ? state[3].loading : false,
+  userDeleteError: (state && state[3]) ? state[3].error : null,
 });
 
 const mapDispatchToProps = dispatch => ({
   submitUserAdd: user => dispatch({ type: UserAddActionTypes.USERADD_REQUEST, payload: user }),
   submitUserEdit: user => dispatch({ type: UserEditActionTypes.USEREDIT_REQUEST, payload: user }),
+  submitUserDelete: user => dispatch({ type: UserDeleteActionTypes.USERDELETE_REQUEST, payload: user }),
 });
-
 
 export default withRedux(
   mapStateToProps,

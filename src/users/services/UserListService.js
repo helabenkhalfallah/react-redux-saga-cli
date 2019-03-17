@@ -27,7 +27,7 @@ export default function* requestUserList() {
   try {
     // get action payload
     // remove if not need
-    const params = .payload;
+    const params = null;
 
     // get base url
     const baseUrl = '';

@@ -517,6 +517,16 @@ sagaAction=""
 if [ "${11}" = "-query-params" -a "${12}" != "" ] 
 then 
   sagaAction="action"
+else
+  sagaAction=""
+fi
+
+requestParams=""
+if [ "${sagaAction}" != "" ] 
+then 
+  requestParams="const params = ${sagaAction}.payload;"
+else 
+  requestParams="const params = null;"
 fi
 
 serviceContent="
@@ -548,7 +558,7 @@ export default function* ${reducerQueryName}(${sagaAction}) {
   try {
     // get action payload
     // remove if not need
-    const params = ${sagaAction}.payload;
+    ${requestParams}
 
     // get base url
     const baseUrl = '';

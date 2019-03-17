@@ -8,7 +8,6 @@ import UserData from '../components/UserData';
 import withRedux from '../../commons/redux/withRedux';
 import UserListActionTypes from '../redux/actions/UserListActionTypes';
 
-
 class UserListPage extends Component {
   // propsType (validation)
   static propTypes = {};
