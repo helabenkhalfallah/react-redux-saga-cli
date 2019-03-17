@@ -1,0 +1,12 @@
+const PHOTOLIST_REQUEST = 'PHOTOLIST_REQUEST';
+const PHOTOLIST_SUCCESS = 'PHOTOLIST_SUCCESS';
+const PHOTOLIST_FAILURE = 'PHOTOLIST_FAILURE';
+
+// export actions types
+const PhotoListActionTypes = {
+  PHOTOLIST_REQUEST,
+  PHOTOLIST_SUCCESS,
+  PHOTOLIST_FAILURE,
+};
+
+export default PhotoListActionTypes;

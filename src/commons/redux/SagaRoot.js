@@ -7,10 +7,13 @@ import UserListService from '../../users/services/UserListService';
 import UserListActionTypes from '../../users/redux/actions/UserListActionTypes';
 import UserDeleteService from '../../users/services/UserDeleteService';
 import UserDeleteActionTypes from '../../users/redux/actions/UserDeleteActionTypes';
+import PhotoListService from '../../photos/services/PhotoListService';
+import PhotoListActionTypes from '../../photos/redux/actions/PhotoListActionTypes';
 
 // add here all saga service root
 export default function* rootSaga() {
   yield all([
+    takeEvery(PhotoListActionTypes.PHOTOLIST_REQUEST, PhotoListService),
     takeEvery(UserDeleteActionTypes.USERDELETE_REQUEST, UserDeleteService),
     takeEvery(UserListActionTypes.USERLIST_REQUEST, UserListService),
     takeEvery(UserEditActionTypes.USEREDIT_REQUEST, UserEditService),

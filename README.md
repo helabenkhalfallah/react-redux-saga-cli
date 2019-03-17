@@ -389,3 +389,6 @@ export default withRedux(
 
 # Issue (TODO)
 When Page already contains mapStateToProps & mapDispatchToProps, it will create anothers mapStateToProps & mapDispatchToProps.
+
+# Note
+Each service has its own : reducer, action, service file.
