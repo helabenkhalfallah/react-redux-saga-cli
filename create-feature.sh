@@ -1,5 +1,10 @@
 #!/bin/bash
 # create-feature feature-name
+# script creation : 
+# 1/ go to project folder
+# 2/ touch create-feature.sh
+# 3/ chmod +x create-feature.sh
+# 4/ alias create-feature='./create-feature.sh'
 
 if [ "$1" = "" ] 
 then 
