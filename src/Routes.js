@@ -7,15 +7,15 @@ import {
 import App from './App';
 import withReduxBoot from './commons/redux/withReduxBoot';
 import UserListPage from './users/pages/UserListPage';
-import PhotosListPage from './photos/pages/PhotosListPage';
 import UserAddPage from './users/pages/UserAddPage';
+import UserDetailsPage from './users/pages/UserDetailsPage';
 
 /* eslint-disable react/jsx-filename-extension */
 const Routes = () => (
   <BrowserRouter>
     <Switch>
+      <Route exact path="/UserDetailsPage" component={UserDetailsPage} />
       <Route exact path="/UserAddPage" component={UserAddPage} />
-      <Route exact path="/PhotosListPage" component={PhotosListPage} />
       <Route exact path="/UserListPage" component={UserListPage} />
       <Route exact path="/" component={App} />
     </Switch>
