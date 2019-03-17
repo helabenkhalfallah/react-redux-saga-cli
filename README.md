@@ -1,6 +1,8 @@
 # Project init with redux & saga
 **project-init-with-redux-saga**
 
+https://github.com/helabenkhalfallah/react-redux-saga-cli/blob/master/project-init-with-redux-saga.sh
+
 This script will install redux and saga dependencies and needed HOCs.
 
 Script Execution : 
@@ -12,6 +14,9 @@ Script Execution :
 
 # Create feature
 create-feature **feature-name**
+
+https://github.com/helabenkhalfallah/react-redux-saga-cli/blob/master/create-feature.sh
+
 
 This command will create a folder named : **feature-name**
 The folder structure will be :
@@ -29,6 +34,9 @@ Script Execution :
 # Create Page
 create-page -feature **feature** -page **page**
 
+https://github.com/helabenkhalfallah/react-redux-saga-cli/blob/master/create-page.sh
+
+
 - Create page under feature.
 - Add page to Routes.
 
@@ -39,6 +47,9 @@ Script Execution :
 
 # Create Page With Components
 create-page -feature **feature** -page **page** -components **CA CB**
+
+https://github.com/helabenkhalfallah/react-redux-saga-cli/blob/master/create-page.sh
+
 
 - Create page under feature.
 - Add page to Routes.
@@ -191,16 +202,19 @@ export default UserDetailsForm;
 # Connect page to service
 connect-page-to-service -feature **feature** -page **page** -service **service** -service-data **service-data** -query-type **post/get** -query-params **object-name**
 
-connect-page-to-service -feature users -page UserListPage -service UserList -service-data users -query-type get
-
-connect-page-to-service -feature users -page UserAddPage -service UserAdd -service-data user -query-type post -query-params user
+https://github.com/helabenkhalfallah/react-redux-saga-cli/blob/master/connect-page-to-service.sh
 
 Script Execution : 
 - go to project root folder
 - chmod +x connect-page-to-service.sh
 - alias create-page='./connect-page-to-service.sh'
 
-This script will create :
+Examples : 
+connect-page-to-service -feature users -page UserListPage -service UserList -service-data users -query-type get
+
+connect-page-to-service -feature users -page UserAddPage -service UserAdd -service-data user -query-type post -query-params user
+
+**This script will automatically create :**
 
 - redux actions :
 
