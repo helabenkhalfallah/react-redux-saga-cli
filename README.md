@@ -199,7 +199,7 @@ UserDetailsForm.defaultProps = {
 export default UserDetailsForm;
 ```
 
-# Connect page to service
+# Connect Page To Service
 connect-page-to-service -feature **feature** -page **page** -service **service** -service-data **service-data** -query-type **post/get** -query-params **object-name**
 
 https://github.com/helabenkhalfallah/react-redux-saga-cli/blob/master/connect-page-to-service.sh
